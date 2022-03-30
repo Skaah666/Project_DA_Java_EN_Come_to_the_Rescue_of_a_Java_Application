@@ -4,13 +4,18 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 
+/*
+* This is the main class of the application AnalyticsCounter
+* to start "first get input" , then "next generate output"
+ */
+
 public class AnalyticsCounter {
     private static int headacheCount = 0;
     private static int rashCount = 0;
     private static int pupilCount = 0;
 
     public static void main(String args[]) throws Exception {
-        // first get input
+        /* first get input */
         BufferedReader reader = new BufferedReader(new FileReader("symptoms.txt"));
         String line = reader.readLine();
 
@@ -31,7 +36,7 @@ public class AnalyticsCounter {
             line = reader.readLine();    // get another symptom
         }
 
-        // next generate output
+        /* next generate output */
         FileWriter writer = new FileWriter("result.out");
         writer.write("headache: " + headacheCount + "\n");
         writer.write("rash: " + rashCount + "\n");
