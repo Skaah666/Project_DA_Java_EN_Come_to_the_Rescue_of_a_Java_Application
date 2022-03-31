@@ -5,8 +5,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 
 /*
-* This is the main class of the application AnalyticsCounter
-* to start "first get input" , then "next generate output"
+ * This is the main class of the application AnalyticsCounter
+ * to start "first get input" , then "next generate output"
  */
 
 public class AnalyticsCounter {
@@ -14,7 +14,7 @@ public class AnalyticsCounter {
     private static int rashCount = 0;
     private static int pupilCount = 0;
 
-    public static void main(String [] args) throws Exception {
+    public static void main(String[] args) throws Exception {
         /* first get input */
         BufferedReader reader = new BufferedReader(new FileReader("Project02Eclipse/src/com/hemebiotech/analytics/symptoms.txt"));
         String line = reader.readLine();
