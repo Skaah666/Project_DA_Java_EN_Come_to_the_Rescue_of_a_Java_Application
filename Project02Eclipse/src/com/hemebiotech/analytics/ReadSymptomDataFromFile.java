@@ -16,13 +16,13 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
     /**
      * @param filepath a full or partial path to file with symptom strings in it, one per line
      */
-    public ReadSymptomDataFromFile(String filepath) {
-        this.filepath = filepath;
+    public ReadSymptomDataFromFile(String file) {
+        this.filepath = file;
     }
 
     @Override
-    public List<String> GetSymptoms() {
-        ArrayList<String> result = new ArrayList<String>();
+    public List<String> getSymptoms() {
+        List<String> result = new ArrayList<String>();
 
         if (filepath != null) {
             try {

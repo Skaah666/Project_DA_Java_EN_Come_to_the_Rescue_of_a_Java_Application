@@ -1,21 +1,17 @@
-package com.hemebiotech.analytics;
+/* package com.hemebiotech.analytics;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
 
-/*
  * This is the main class of the application AnalyticsCounter
  * to start "first get input" , then "next generate output"
  */
 
-public class AnalyticsCounter {
+/* lic class AnalyticsCounter {
     private static int headCount = 0;
     private static int rashCount = 0;
     private static int pupilCount = 0;
 
-    public static void main(String[] args) throws Exception {
-        /* first get input */
+    /* public static void main(String[] args) throws Exception {
+
         BufferedReader reader = new BufferedReader(new FileReader("Project02Eclipse/src/com/hemebiotech/analytics/symptoms.txt"));
         String line = reader.readLine();
 
@@ -33,11 +29,9 @@ public class AnalyticsCounter {
             line = reader.readLine();    // get another symptom
         }
 
-        /* next generate output */
         FileWriter writer = new FileWriter("Project02Eclipse/src/com/hemebiotech/analytics/result.out");
         writer.write("headache: " + headCount + "\n");
         writer.write("rash: " + rashCount + "\n");
         writer.write("dilated pupils: " + pupilCount + "\n");
         writer.close();
-    }
-}
+    } */

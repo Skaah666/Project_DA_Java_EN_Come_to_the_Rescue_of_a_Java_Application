@@ -1,28 +1,28 @@
 package com.hemebiotech.analytics;
 
+// Java program to count frequencies of elements
+// using HashMap.
 
-import java.util.Comparator;
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class SymptomsTreeMap {
+class SymptomsTreeMap {
 
-    abstract static class symptomsTreeMap <symptomsName,counter> {
+    public static void countFrequencies(ArrayList<String> list)
+    {
 
-        Map<Integer, String> map = new TreeMap<Integer, String>();
-            map.put(symptomsName,counter);
+        Map<String, Integer> symptomsTreeMap = new TreeMap<String, Integer>();
 
-            map.entrySet()
+        for (String symptoms : list) {
+            Integer count = symptomsTreeMap.get(symptoms);
+            symptomsTreeMap.put(symptoms, (count == null) ? 1 : count + 1);
+        }
 
-        stream()
+        for (Map.Entry m : symptomsTreeMap.entrySet())
 
-                    .
-
-        void sorted(Map.Entry.comparingByValue(Comparator.Order()))
-
-
-        forEach(System.out::println);
-
+            System.out.println("Frequency of " + m.getKey() + " is " + m.getValue());
     }
+
 
 }
