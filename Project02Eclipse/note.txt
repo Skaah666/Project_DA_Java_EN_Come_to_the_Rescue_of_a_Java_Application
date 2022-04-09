@@ -1,0 +1,24 @@
+
+
+- faire que tout les symptomes soit lu de manière dynamique a partir du fichier
+
+- fonction main :
+        - faire le compte des symptomes  : https://www.geeksforgeeks.org/count-occurrences-elements-list-java/
+        - faire le tri des symptomes
+        - enregistrer le tout ds result.out
+
+https://www.geeksforgeeks.org/reading-text-file-into-java-hashmap/
+https://www.geeksforgeeks.org/write-hashmap-to-a-text-file-in-java/
+
+
+
+difficultés :
+ - a la compilation :  ReadSymptomDataFromFile "is not abstract and does not override abstract method"
+    -> correction ligne 18 ISymptomReader : majuscule au nom de la methode "getSymptoms"
+
+ - au lancement : please define the main method as: public static void main(String[] args)
+    -> ajout de static dans public static void main(String[] args) car SymptomsTreeMap est static
+
+- à la compilation : java: cannot find symbol
+                     symbol:   method entrySet()
+                     location: class com.hemebiotech.analytics.SymptomsTreeMap
