@@ -9,10 +9,10 @@ import java.util.TreeMap;
 
 class SymptomsTreeMap {
 
+    static Map<String, Integer> symptomsTreeMap = new TreeMap<>();
+
     public static void countFrequencies(ArrayList<String> list)
     {
-
-        Map<String, Integer> symptomsTreeMap = new TreeMap<String, Integer>();
 
         for (String symptoms : list) {
             Integer count = symptomsTreeMap.get(symptoms);

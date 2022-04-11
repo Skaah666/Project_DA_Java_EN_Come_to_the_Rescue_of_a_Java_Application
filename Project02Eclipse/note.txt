@@ -9,6 +9,7 @@
 
 https://www.geeksforgeeks.org/reading-text-file-into-java-hashmap/
 https://www.geeksforgeeks.org/write-hashmap-to-a-text-file-in-java/
+https://www.delftstack.com/fr/howto/java/append-to-a-text-file-in-java/
 
 
 
@@ -19,6 +20,6 @@ difficultés :
  - au lancement : please define the main method as: public static void main(String[] args)
     -> ajout de static dans public static void main(String[] args) car SymptomsTreeMap est static
 
-- à la compilation : java: cannot find symbol
-                     symbol:   method entrySet()
-                     location: class com.hemebiotech.analytics.SymptomsTreeMap
+ - creation d'un fichier txt vide ( writeSymptomInFile )
+        -> recuperation de la variable symptomsTreeMap
+        -> changement de retour de la classe SymptomsTreeMap
