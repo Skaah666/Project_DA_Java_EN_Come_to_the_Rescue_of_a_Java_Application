@@ -13,11 +13,10 @@ import java.util.TreeMap;
 
 class WriteSymptomInFile {
 
-    public static String outputFilePath
-            = "Project02Eclipse/src/com/hemebiotech/analytics/result.out";
 
+    // il faudrait que cette methode ne soit plus statique , il faut une interface qui definisse cette methode pour fonctionner comme le symptoms reader
 
-    public static void writeSymptomInFile (String args) {
+    public static void writeSymptomInFile(String outputFilePath, Map<String, Integer> symptomsFrequencies) {
 
         // new file object
         File filepath = new File(outputFilePath);
@@ -30,31 +29,23 @@ class WriteSymptomInFile {
             writer = new BufferedWriter(new FileWriter(filepath));
 
             // iterate map entries
-            for (Map.Entry<String, Integer> entry :
-                    SymptomsTreeMap.symptomsTreeMap.entrySet()) {
+            for (Map.Entry<String, Integer> entry : symptomsFrequencies.entrySet()) {
 
                 // put key and value separated by a colon
-                writer.write(entry.getKey() + ": "
-                        + entry.getValue());
+                writer.write(entry.getKey() + ": " + entry.getValue());
 
                 // new line
                 writer.newLine();
             }
 
             writer.flush();
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
-        }
-        finally {
+        } finally {
 
-            try {
+            // always close the writer
+            writer.close();
 
-                // always close the writer
-                writer.close();
-            }
-            catch (Exception e) {
-            }
         }
     }
 }

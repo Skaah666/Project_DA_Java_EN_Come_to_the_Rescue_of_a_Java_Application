@@ -3,26 +3,22 @@ package com.hemebiotech.analytics;
 // Class to count frequencies of elements
 // using HashMap.
 
-import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
 class SymptomsTreeMap {
 
-    static Map<String, Integer> symptomsTreeMap = new TreeMap<>();
+// il faudrait que cette methode ne soit plus statique , il faut une interface qui definisse cette methode pour fonctionner comme le symptoms reader
 
-    public static void countFrequencies(ArrayList<String> list)
-    {
+    public static Map<String, Integer> countFrequencies(List<String> list) {
+
+        Map<String, Integer> symptomsTreeMap = new TreeMap<>();
 
         for (String symptoms : list) {
             Integer count = symptomsTreeMap.get(symptoms);
             symptomsTreeMap.put(symptoms, (count == null) ? 1 : count + 1);
         }
-
-        for (Map.Entry m : symptomsTreeMap.entrySet())
-
-            System.out.println("Frequency of " + m.getKey() + " is " + m.getValue());
+        return symptomsTreeMap;
     }
-
-
 }

@@ -1,29 +1,23 @@
 package com.hemebiotech.analytics;
 
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.TreeMap;
 
 import static com.hemebiotech.analytics.SymptomsTreeMap.countFrequencies;
-import static com.hemebiotech.analytics.WriteSymptomInFile.outputFilePath;
 import static com.hemebiotech.analytics.WriteSymptomInFile.writeSymptomInFile;
 
+// creation de sous package , ss package gestion symptom et gestion des fichiers ( creation de sous dossier et y mettre les classes correspondantes)
 
 public class AnalyticsCounterMain {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
-        ReadSymptomDataFromFile reader = new ReadSymptomDataFromFile("Project02Eclipse/src/com/hemebiotech/analytics/symptoms.txt");
+        ISymptomReader reader = new ReadSymptomDataFromFile("Project02Eclipse/src/com/hemebiotech/analytics/symptoms.txt");
         List<String> symptomsList = reader.getSymptoms();
 
-        Map<String, Integer> symptomsTreeMap = new TreeMap<String, Integer>();
-        countFrequencies((ArrayList<String>) symptomsList);
+        Map<String, Integer> symptomsFrequencies = countFrequencies(symptomsList);
 
-        writeSymptomInFile(outputFilePath);
-
-
+        writeSymptomInFile("Project02Eclipse/src/com/hemebiotech/analytics/result.out", symptomsFrequencies);
     }
 }
 
