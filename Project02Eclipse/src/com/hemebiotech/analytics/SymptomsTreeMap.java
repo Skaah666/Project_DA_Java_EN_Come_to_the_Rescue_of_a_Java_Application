@@ -1,6 +1,6 @@
 package com.hemebiotech.analytics;
 
-// Java program to count frequencies of elements
+// Class to count frequencies of elements
 // using HashMap.
 
 import java.util.ArrayList;

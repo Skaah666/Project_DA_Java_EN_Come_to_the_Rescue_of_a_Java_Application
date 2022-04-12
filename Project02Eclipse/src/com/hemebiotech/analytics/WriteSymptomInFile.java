@@ -1,6 +1,6 @@
 package com.hemebiotech.analytics;
 
-// Java program to write TreeMap to a file
+// Class to write TreeMap to a file
 
 import java.io.BufferedWriter;
 import java.io.File;
