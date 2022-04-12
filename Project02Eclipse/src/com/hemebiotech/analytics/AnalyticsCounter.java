@@ -1,11 +1,11 @@
-/* package com.hemebiotech.analytics;
+/*
 
+* package com.hemebiotech.analytics;
 
- * This is the main class of the application AnalyticsCounter
- * to start "first get input" , then "next generate output"
+ * This is the OLD main class of the application AnalyticsCounter
  */
 
-/* lic class AnalyticsCounter {
+/* public class AnalyticsCounter {
     private static int headCount = 0;
     private static int rashCount = 0;
     private static int pupilCount = 0;

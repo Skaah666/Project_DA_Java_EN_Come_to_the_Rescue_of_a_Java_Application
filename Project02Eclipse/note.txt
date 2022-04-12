@@ -3,10 +3,11 @@
 - faire que tout les symptomes soit lu de manière dynamique a partir du fichier
 
 - fonction main :
-        - faire le compte des symptomes  : https://www.geeksforgeeks.org/count-occurrences-elements-list-java/
+        - faire le compte des symptomes
         - faire le tri des symptomes
         - enregistrer le tout ds result.out
 
+https://www.geeksforgeeks.org/count-occurrences-elements-list-java/
 https://www.geeksforgeeks.org/reading-text-file-into-java-hashmap/
 https://www.geeksforgeeks.org/write-hashmap-to-a-text-file-in-java/
 https://www.delftstack.com/fr/howto/java/append-to-a-text-file-in-java/
@@ -21,5 +22,5 @@ difficultés :
     -> ajout de static dans public static void main(String[] args) car SymptomsTreeMap est static
 
  - creation d'un fichier txt vide ( writeSymptomInFile )
-        -> recuperation de la variable symptomsTreeMap
+        -> recuperation de la variable symptomsTreeMap ( plus facile qu'il n'y parraissait car j'avais oublié la foncion main)
         -> changement de retour de la classe SymptomsTreeMap

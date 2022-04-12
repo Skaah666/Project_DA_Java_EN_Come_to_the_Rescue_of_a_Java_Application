@@ -14,7 +14,7 @@ import java.util.TreeMap;
 class WriteSymptomInFile {
 
     public static String outputFilePath
-            = "result.out";
+            = "Project02Eclipse/src/com/hemebiotech/analytics/result.out";
 
 
     public static void writeSymptomInFile (String args) {
