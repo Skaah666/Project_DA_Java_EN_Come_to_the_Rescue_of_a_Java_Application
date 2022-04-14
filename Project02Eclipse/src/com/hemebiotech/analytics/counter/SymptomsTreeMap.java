@@ -1,4 +1,4 @@
-package com.hemebiotech.analytics;
+package com.hemebiotech.analytics.counter;
 
 // Class to count frequencies of elements
 // using HashMap.
@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-class SymptomsTreeMap {
+public class SymptomsTreeMap {
 
 // il faudrait que cette methode ne soit plus statique , il faut une interface qui definisse cette methode pour fonctionner comme le symptoms reader
 

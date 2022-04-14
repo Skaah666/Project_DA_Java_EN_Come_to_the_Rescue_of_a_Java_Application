@@ -1,4 +1,4 @@
-package com.hemebiotech.analytics;
+package com.hemebiotech.analytics.writer;
 
 // Class to write TreeMap to a file
 
@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.TreeMap;
 
 
-class WriteSymptomInFile {
+public class WriteSymptomInFile {
 
 
     // il faudrait que cette methode ne soit plus statique , il faut une interface qui definisse cette methode pour fonctionner comme le symptoms reader
@@ -42,10 +42,12 @@ class WriteSymptomInFile {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-
-            // always close the writer
-            writer.close();
-
+            try {
+                // always close the writer
+                writer.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

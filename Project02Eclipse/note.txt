@@ -23,4 +23,4 @@ difficultés :
 
  - creation d'un fichier txt vide ( writeSymptomInFile )
         -> recuperation de la variable symptomsTreeMap ( plus facile qu'il n'y parraissait car j'avais oublié la foncion main)
-        -> changement de retour de la classe SymptomsTreeMap
+        -> changement de retour de la classe SymptomsTreeMap"
