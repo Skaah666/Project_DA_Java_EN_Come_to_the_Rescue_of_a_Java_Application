@@ -7,11 +7,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class SymptomsTreeMap {
 
-// il faudrait que cette methode ne soit plus statique , il faut une interface qui definisse cette methode pour fonctionner comme le symptoms reader
+public class SymptomsTreeMap implements ISymptomsTreeMap{
 
-    public static Map<String, Integer> countFrequencies(List<String> list) {
+    @Override
+    public Map<String, Integer> countFrequencies(List<String> list) {
 
         Map<String, Integer> symptomsTreeMap = new TreeMap<>();
 

@@ -11,12 +11,21 @@ import java.util.Map;
 import java.util.TreeMap;
 
 
-public class WriteSymptomInFile {
 
+public class WriteSymptomInFile implements IWriteSymptomInFile {
 
-    // il faudrait que cette methode ne soit plus statique , il faut une interface qui definisse cette methode pour fonctionner comme le symptoms reader
+    private String outputFilePath;
+    private Map<String, Integer> symptomsFrequencies;
 
-    public static void writeSymptomInFile(String outputFilePath, Map<String, Integer> symptomsFrequencies) {
+    public WriteSymptomInFile(String outputFilePath, Map<String, Integer> symptomsFrequencies) {
+
+        this.outputFilePath = outputFilePath;
+        this.symptomsFrequencies = symptomsFrequencies;
+
+    }
+
+    @Override
+    public void display() {
 
         // new file object
         File filepath = new File(outputFilePath);
