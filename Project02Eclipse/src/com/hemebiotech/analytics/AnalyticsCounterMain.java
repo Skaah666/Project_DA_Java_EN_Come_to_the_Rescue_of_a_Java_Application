@@ -11,7 +11,6 @@ import com.hemebiotech.analytics.writer.WriteSymptomInFile;
 import java.util.List;
 import java.util.Map;
 
-// creation de sous package , ss package gestion symptom et gestion des fichiers ( creation de sous dossier et y mettre les classes correspondantes)
 
 public class AnalyticsCounterMain {
 
@@ -25,7 +24,7 @@ public class AnalyticsCounterMain {
         Map<String, Integer> symptomsFrequencies = counter.countFrequencies(symptomsList);
 
         IWriteSymptomInFile writer = new WriteSymptomInFile("Project02Eclipse/src/com/hemebiotech/analytics/result.out", symptomsFrequencies);
-        writer.display();
+        writer.writeInFile();
 
     }
 }

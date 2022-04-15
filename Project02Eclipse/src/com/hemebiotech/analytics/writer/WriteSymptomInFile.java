@@ -25,7 +25,7 @@ public class WriteSymptomInFile implements IWriteSymptomInFile {
     }
 
     @Override
-    public void display() {
+    public void writeInFile() {
 
         // new file object
         File filepath = new File(outputFilePath);
