@@ -26,6 +26,8 @@ public class AnalyticsCounterMain {
         IWriteSymptomInFile writer = new WriteSymptomInFile("Project02Eclipse/src/com/hemebiotech/analytics/result.out", symptomsFrequencies);
         writer.writeInFile();
 
+        ;
+
     }
 }
 
